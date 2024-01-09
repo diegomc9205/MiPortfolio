@@ -787,4 +787,37 @@
                 margin-bottom: 15px;
             }
         }
-       
+        @media screen and (max-width: 720px) {
+            .star-wars-intro .main-content {
+                font-size: 35px;
+            }
+        
+            .star-wars-intro .title-content {
+                position: absolute;
+                top: 100%;
+                animation: scroll 100s linear 4s forwards;
+            }
+        
+            .star-wars-intro .main-logo {
+                width: 1.3em;
+                top: 10vh;
+                font-size: 5em;
+                margin-left: -0.65em;
+            }
+        
+            @keyframes logo {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+        
+                50% {
+                    opacity: 1;
+                }
+        
+                100% {
+                    transform: scale(0.5);
+                    opacity: 0;
+                }
+            }
+        }
