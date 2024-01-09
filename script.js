@@ -1,4 +1,4 @@
-// Función que muestra el menú responsive
+
 function responsiveMenu() {
     var x = document.getElementById("nav");
     if (x.className === "") {
@@ -8,12 +8,10 @@ function responsiveMenu() {
     }
 }
 
-// Detecta el scrolling para aplicar la animación de la barra de habilidades
 window.onscroll = function () {
     efectoHabilidades();
 };
 
-// Función que aplica la animación de la barra de habilidades
 function efectoHabilidades() {
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
@@ -34,21 +32,21 @@ document.getElementById('logo').addEventListener('click', function () {
     setTimeout(function () {
         // Recarga la página
         location.reload();
-    }, 500); // Puedes ajustar el tiempo según sea necesario
+    }, 500); 
 });
 
 // Inicialización de Email.js
-emailjs.init("XEb4a7dbcOMsPFYTi"); // Reemplaza "tu_user_id" con tu ID de usuario de Email.js
+emailjs.init("XEb4a7dbcOMsPFYTi"); 
+function enviar(e) {
 
-// Manejo del envío del formulario con Email.js
-document.getElementById("formulario-contacto").addEventListener("submit", function (event) {
-    event.preventDefault();
+    e.preventDefault()
+        emailjs.sendForm('service_51557fb', 'template_w447iqd', e.target).then((result) => {
+            console.log(result.text)
+            alert("Mensaje enviado con éxito")
+        }, (error) => {
+            console.log(error.text)
+            alert("Ocurrió un error al enviar el mensaje")
+        })
+    
+}
 
-    var form = event.target;
-    emailjs.sendForm("default_service", "template_w447iqd", new FormData(form))
-        .then(function (response) {
-            console.log("Correo enviado con éxito", response);
-        }, function (error) {
-            console.log("Error al enviar el correo", error);
-        });
-});
