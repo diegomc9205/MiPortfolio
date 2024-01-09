@@ -696,7 +696,14 @@
             margin: 5px;
             font-size: 26px;
         }
-
+        .redesdos a i.fa-github {
+            color: #bbe60f; 
+        }
+        
+        .redesdos a i.fa-linkedin {
+            color: #bbe60f; }
+        .redesdos a i.fa-envelope{
+                color: #bbe60f; }
                /* *********************************seccion Responsive***************************************/
 
 
@@ -780,11 +787,4 @@
                 margin-bottom: 15px;
             }
         }
-        .redesdos a i.fa-github {
-            color: #bbe60f; 
-        }
-        
-        .redesdos a i.fa-linkedin {
-            color: #bbe60f; }
-        .redesdos a i.fa-envelope{
-                color: #bbe60f; }
+       
